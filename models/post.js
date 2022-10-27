@@ -23,5 +23,10 @@ Post.init(
                 type: DataTypes.STRING,
                 allowNull: false,
             }
+    },
+    {
+    sequelize
     }
 )
+
+module.exports = Post;
