@@ -1,28 +1,24 @@
-//body content, username, date
-//require user and post
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Comment extends Model {
-
-}
+class Comment extends Model {}
 
 Comment.init(
-    {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true,
-            },   
-            body: {
-            type: DataTypes.STRING,
-            allowNull: false,    
-            }
+{
+    id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    primaryKey: true,
+    autoIncrement: true,
     },
-    {
-        sequelize
-    }
-)
+    body: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    },
+},
+{
+    sequelize,
+}
+);
 
 module.exports = Comment;

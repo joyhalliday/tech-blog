@@ -1,17 +1,16 @@
-{{!-- existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in --}}
 {{#each posts as |post| }}
 <div class="row mb-4 project">
-  <div class="col-md-5">
+<div class="col-md-5">
     <h2>
 
-      <a href="/post/{{post.id}}">{{post.title}}</a>
+    <a href="/post/{{post.id}}">{{post.title}}</a>
     </h2>
     <p>Created by {{post.user.username}} on {{format_date post.createdAt}}</p>
-  </div>
-  <div class="col-md-7">
+</div>
+<div class="col-md-7">
     <p>
-      {{post.body}}
+    {{post.body}}
     </p>
-  </div>
+</div>
 </div>
 {{/each}}
